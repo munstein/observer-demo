@@ -3,19 +3,18 @@ package core
 import interfaces.IObservable
 import interfaces.IObserver
 
-class RainStation : IObservable{
+class RainStation() : IObservable{
 
     var observers : ArrayList<IObserver>
     var willRain : Boolean
         get() = this.willRain
         set(value) {
-            this.willRain = value
             notifyObservers()
         }
 
     init {
+        observers = ArrayList<IObserver>()
         willRain = false
-        observers = ArrayList()
     }
 
     override fun add(observer: IObserver) {

@@ -7,5 +7,9 @@ fun main(args : Array<String>){
     val rainNotifier = RainNotifier(rainStation)
     val notificadorChuva = NotificadorChuva(rainStation)
 
+    rainStation.add(rainNotifier)
+    rainStation.add(notificadorChuva)
+
+    rainStation.willRain = true
 
 }

@@ -11,6 +11,6 @@ class NotificadorChuva(rainStation : RainStation) : IObserver {
     }
 
     override fun update() {
-        println("It will rain")
+        println("Vai chover")
     }
 }
