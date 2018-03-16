@@ -3,7 +3,7 @@ package core
 import interfaces.IObservable
 import interfaces.IObserver
 
-class RainStation() : IObservable{
+class RainStation : IObservable{
 
     var observers : ArrayList<IObserver>
     var willRain : Boolean
