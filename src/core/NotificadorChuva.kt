@@ -11,6 +11,6 @@ class NotificadorChuva(rainStation : RainStation) : IObserver {
     }
 
     override fun update() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        println("It will rain")
     }
 }
