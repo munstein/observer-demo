@@ -11,6 +11,9 @@ class NotificadorChuva(rainStation : RainStation) : IObserver {
     }
 
     override fun update() {
-        println("Vai chover")
+        if(rainStation.willRain)
+            println("Vai chover.")
+        else
+            println("Não vai chover.")
     }
 }

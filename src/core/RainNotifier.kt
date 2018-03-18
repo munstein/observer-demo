@@ -11,6 +11,9 @@ class RainNotifier(rainStation : RainStation) : IObserver {
     }
 
     override fun update() {
-        println("It will rain")
+        if(rainStation.willRain)
+            println("It will rain")
+        else
+            println("It won't rain")
     }
 }

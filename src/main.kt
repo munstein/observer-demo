@@ -10,6 +10,7 @@ fun main(args : Array<String>){
     rainStation.add(rainNotifier)
     rainStation.add(notificadorChuva)
 
+    rainStation.willRain = false
     rainStation.willRain = true
 
 }

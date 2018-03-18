@@ -6,15 +6,15 @@ import interfaces.IObserver
 class RainStation : IObservable{
 
     var observers : ArrayList<IObserver>
-    var willRain : Boolean
-        get() = this.willRain
+    var willRain : Boolean = false
+        get() = field
         set(value) {
+            field = value
             notifyObservers()
         }
 
     init {
         observers = ArrayList<IObserver>()
-        willRain = false
     }
 
     override fun add(observer: IObserver) {
