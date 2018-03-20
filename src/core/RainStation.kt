@@ -3,10 +3,10 @@ package core
 import interfaces.IObservable
 import interfaces.IObserver
 
-class RainStation : IObservable{
+class RainStation : IObservable {
 
-    var observers : ArrayList<IObserver>
-    var willRain : Boolean = false
+    var observers: ArrayList<IObserver>
+    var willRain: Boolean = false
         get() = field
         set(value) {
             field = value
@@ -26,12 +26,10 @@ class RainStation : IObservable{
     }
 
     override fun notifyObservers() {
-        for (o in observers){
+        for (o in observers) {
             o.update()
         }
     }
-
-
 
 
 }
